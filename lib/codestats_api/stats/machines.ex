@@ -21,4 +21,22 @@ defmodule CodestatsApi.Stats.Machines do
             xps: CodestatsApi.Stats.Xp.t()
           }
         }
+
+  @doc """
+  Parses the machines from the user's data from the Code::Stats API.
+  """
+  @spec parse(map()) :: t()
+  def parse(input) do
+    input
+    |> Enum.map(fn {machine, %{"new_xps" => new_xps, "xps" => xps}} ->
+      {
+        machine,
+        %{
+          new_xps: CodestatsApi.Stats.Xp.parse(new_xps),
+          xps: CodestatsApi.Stats.Xp.parse(xps)
+        }
+      }
+    end)
+    |> Enum.into(%{})
+  end
 end
