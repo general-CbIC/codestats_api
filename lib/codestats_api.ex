@@ -8,9 +8,9 @@ defmodule CodestatsApi do
 
   ## Examples
 
-      iex> CodestatsApi.get_user_data("username")
-      {:ok, %{"user" => %{"username" => "username"}}}
-
+      iex> {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("cbic")
+      iex> result.user
+      "cbic"
   """
   @spec get_user_data(String.t()) ::
           {:ok, CodestatsApi.Stats.t()}

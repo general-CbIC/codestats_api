@@ -1,4 +1,6 @@
 defmodule CodestatsApi.Stats.Machines do
+  @moduledoc false
+
   @typedoc """
   Map of machine names to XP.
 

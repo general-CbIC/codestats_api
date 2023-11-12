@@ -21,7 +21,13 @@ defmodule CodestatsApi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.0"}
+      {:jason, "~> 1.0"},
+      # dev environment
+      {:credo, ">= 0.0.0", only: [:dev], runtime: false},
+      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
+      {:doctor, ">= 0.0.0", only: [:dev], runtime: false},
+      {:ex_check, "~> 0.15.0", only: [:dev], runtime: false},
+      {:ex_doc, ">= 0.0.0", only: [:dev], runtime: false}
     ]
   end
 end

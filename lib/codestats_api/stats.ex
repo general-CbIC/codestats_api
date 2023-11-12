@@ -1,4 +1,9 @@
 defmodule CodestatsApi.Stats do
+  @moduledoc false
+
+  @typedoc """
+  Structure containing all the user's stats.
+  """
   @type t() :: %__MODULE__{
           user: String.t(),
           dates: CodestatsApi.Stats.Dates.t(),

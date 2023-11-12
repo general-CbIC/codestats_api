@@ -1,4 +1,6 @@
 defmodule CodestatsApi.Stats.Dates do
+  @moduledoc false
+
   @typedoc """
   This map describes the amount of XP earned on each date.
 
