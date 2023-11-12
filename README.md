@@ -1,11 +1,16 @@
 # CodestatsApi
 
-**TODO: Add description**
+Elixir library for making requests to [Code::Stats](https://codestats.net/). Why not?
+
+The library uses only one external dependency - [Jason](https://hex.pm/packages/jason), to parse the JSON result. For HTTP requests, the built-in OTP [:httpc](https://www.erlang.org/doc/man/httpc.html) is used.
+
+## Requirements
+
+TODO: add
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `codestats_api` to your list of dependencies in `mix.exs`:
+Add `:codestats_api` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +20,24 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/codestats_api>.
+## Usage
 
+### Get user's Stats
+
+```elixir
+{:ok, %CodestatsApi.Stats{}} = CodestatsApi.get_user_data("username")
+```
+
+That's all :)
+A detailed description of the `Stats` structure can be found [here]().
+
+## Contributions
+
+If you feel something can be improved or have any questions about specific behaviors or pieces of implementation, please feel free to file an issue. Proposed changes should be taken to issues before any PRs to save time on code that might not be merged upstream.
+
+If you are ready to change the project, please read the [Contributing guide](CONTRIBUTING.md) first.
+
+## 1.0.0 Roadmap
+
+- [x] Interface to get user's stats
+- [ ] Interface to push updates

@@ -19,7 +19,7 @@ defmodule CodestatsApiTest do
 
         # dates
         assert is_map(result.dates)
-        assert result.dates["2021-03-05"] == 22626
+        assert result.dates["2021-03-05"] == 22_626
         assert result.dates["2021-03-26"] == 69
         assert result.dates["2021-01-13"] == 467
         assert Enum.count(result.dates) == 822
