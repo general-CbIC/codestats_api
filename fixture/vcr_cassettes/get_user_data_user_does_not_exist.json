@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "options": {
+        "httpc_options": [],
+        "http_options": []
+      },
+      "body": "",
+      "url": "https://codestats.net/api/users/no_such_user",
+      "headers": [],
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": false,
+      "type": "ok",
+      "body": "{\"error\":\"User not found or private.\"}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "connection": "keep-alive",
+        "date": "Sun, 12 Nov 2023 07:49:45 GMT",
+        "server": "nginx",
+        "content-length": "38",
+        "content-type": "application/json; charset=utf-8",
+        "permissions-policy": "interest-cohort=()",
+        "x-request-id": "F5bQtR6GNQoxU5QDdISh"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        404,
+        "Not Found"
+      ]
+    }
+  }
+]

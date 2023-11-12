@@ -69,5 +69,11 @@ defmodule CodestatsApiTest do
         assert result.total_xp == 0
       end
     end
+
+    test "returns error when user does not exist" do
+      use_cassette "get_user_data_user_does_not_exist" do
+        assert {:error, :user_not_found} = CodestatsApi.get_user_data("no_such_user")
+      end
+    end
   end
 end
