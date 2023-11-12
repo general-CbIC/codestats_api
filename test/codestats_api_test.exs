@@ -10,7 +10,7 @@ defmodule CodestatsApiTest do
   end
 
   describe "get_user_data/1" do
-    test "returns the data from the Code::Stats API for user cbic" do
+    test "returns the data from the Code::Stats API for user `cbic`" do
       use_cassette "get_user_data_cbic" do
         assert {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("cbic")
 
@@ -43,6 +43,30 @@ defmodule CodestatsApiTest do
 
         # total_xp
         assert result.total_xp == 1_010_291
+      end
+    end
+
+    test "returns the data from the Code::Stats API for user `test`" do
+      use_cassette "get_user_data_test" do
+        assert {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("test")
+
+        # user name
+        assert result.user == "test"
+
+        # dates
+        assert result.dates == %{}
+
+        # languages
+        assert result.languages == %{}
+
+        # machines
+        assert result.machines == %{}
+
+        # new_xp
+        assert result.new_xp == 0
+
+        # total_xp
+        assert result.total_xp == 0
       end
     end
   end

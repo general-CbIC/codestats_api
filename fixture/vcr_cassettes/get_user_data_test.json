@@ -1,0 +1,37 @@
+[
+  {
+    "request": {
+      "options": {
+        "httpc_options": [],
+        "http_options": []
+      },
+      "body": "",
+      "url": "https://codestats.net/api/users/test",
+      "headers": [],
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": false,
+      "type": "ok",
+      "body": "{\"dates\":{},\"languages\":{},\"machines\":{},\"new_xp\":0,\"total_xp\":0,\"user\":\"test\"}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "connection": "keep-alive",
+        "date": "Sun, 12 Nov 2023 07:46:49 GMT",
+        "server": "nginx",
+        "content-length": "79",
+        "content-type": "application/json; charset=utf-8",
+        "permissions-policy": "interest-cohort=()",
+        "x-request-id": "F5bQjAZN6RJH86IDdHuB",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-frame-options": "DENY"
+      },
+      "status_code": [
+        "HTTP/1.1",
+        200,
+        "OK"
+      ]
+    }
+  }
+]
