@@ -4,16 +4,23 @@ defmodule CodestatsApi.MixProject do
   def project do
     [
       app: :codestats_api,
-      version: "0.1.0",
-      elixir: "~> 1.15",
-      start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: "Code::Stats API client",
+      docs: docs(),
+      elixir: "~> 1.15",
+      elixirc_options: [
+        warnings_as_errors: true
+      ],
+      package: package(),
+      start_permanent: Mix.env() == :prod,
+      source_url: "https://github.com/general-CbIC/codestats_api",
       preferred_cli_env: [
         vcr: :test,
         "vcr.delete": :test,
         "vcr.check": :test,
         "vcr.show": :test
-      ]
+      ],
+      version: "0.1.0"
     ]
   end
 
@@ -36,6 +43,24 @@ defmodule CodestatsApi.MixProject do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test environment
       {:exvcr, "~> 0.14", only: :test}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      extras: ["README.md", "CONTRIBUTING.md"]
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{
+        "Changelog" => "https://github.com/general-CbIC/codestats_api/blob/develop/CHANGELOG.md",
+        "GitHub" => "https://github.com/general-CbIC/codestats_api",
+        "Sponsor" => "https://github.com/sponsors/general-CbIC"
+      }
     ]
   end
 end

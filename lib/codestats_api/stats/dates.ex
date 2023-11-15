@@ -1,7 +1,5 @@
 defmodule CodestatsApi.Stats.Dates do
-  @moduledoc false
-
-  @typedoc """
+  @moduledoc """
   This map describes the amount of XP earned on each date.
 
   Date in format `YYYY-MM-DD` is used as a key, and the amount of XP earned on that date is used as a value.

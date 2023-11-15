@@ -29,7 +29,7 @@ end
 ```
 
 That's all :)
-A detailed description of the `Stats` structure can be found [here]().
+A detailed description of the `Stats` structure can be found [here](https://hexdocs.pm/codestats_api/CodestatsApi.Stats.html).
 
 ## Contributions
 
