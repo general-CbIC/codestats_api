@@ -7,7 +7,7 @@ defmodule CodestatsApi.MixProject do
       deps: deps(),
       description: "Code::Stats API client",
       docs: docs(),
-      elixir: "~> 1.15",
+      elixir: "~> 1.4",
       elixirc_options: [
         warnings_as_errors: true
       ],
