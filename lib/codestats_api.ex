@@ -1,4 +1,4 @@
-defmodule CodestatsApi do
+defmodule CodestatsAPI do
   @moduledoc """
   This module is responsible for handling the requests to the Code::Stats API.
   """
@@ -8,12 +8,12 @@ defmodule CodestatsApi do
 
   ## Examples
 
-      iex> {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("cbic")
+      iex> {:ok, %CodestatsAPI.Stats{} = result} = CodestatsAPI.get_user_data("cbic")
       iex> result.user
       "cbic"
   """
   @spec get_user_data(String.t()) ::
-          {:ok, CodestatsApi.Stats.t()}
+          {:ok, CodestatsAPI.Stats.t()}
           | {:error, :user_not_found}
           | {:error, :something_went_wrong}
   def get_user_data(username) do
@@ -24,7 +24,7 @@ defmodule CodestatsApi do
 
     case :httpc.request(:get, {url, []}, [], []) do
       {:ok, {{_version, 200, _reason_phrase}, _headers, body}} ->
-        {:ok, body |> Jason.decode!() |> CodestatsApi.Stats.parse()}
+        {:ok, body |> Jason.decode!() |> CodestatsAPI.Stats.parse()}
 
       {:ok, {{_version, 404, _reason_phrase}, _headers, _body}} ->
         {:error, :user_not_found}

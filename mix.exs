@@ -1,4 +1,4 @@
-defmodule CodestatsApi.MixProject do
+defmodule CodestatsAPI.MixProject do
   use Mix.Project
 
   def project do

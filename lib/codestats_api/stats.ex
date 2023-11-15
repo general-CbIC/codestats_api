@@ -1,14 +1,14 @@
-defmodule CodestatsApi.Stats do
+defmodule CodestatsAPI.Stats do
   @moduledoc """
   Structure containing all the user's stats.
   """
   @type t() :: %__MODULE__{
           user: String.t(),
-          dates: CodestatsApi.Stats.Dates.t(),
-          languages: CodestatsApi.Stats.Languages.t(),
-          machines: CodestatsApi.Stats.Machines.t(),
-          new_xp: CodestatsApi.Stats.Xp.t(),
-          total_xp: CodestatsApi.Stats.Xp.t()
+          dates: CodestatsAPI.Stats.Dates.t(),
+          languages: CodestatsAPI.Stats.Languages.t(),
+          machines: CodestatsAPI.Stats.Machines.t(),
+          new_xp: CodestatsAPI.Stats.Xp.t(),
+          total_xp: CodestatsAPI.Stats.Xp.t()
         }
 
   defstruct user: "", dates: %{}, languages: %{}, machines: %{}, new_xp: 0, total_xp: 0
@@ -20,11 +20,11 @@ defmodule CodestatsApi.Stats do
   def parse(input) do
     %__MODULE__{
       user: input["user"],
-      dates: CodestatsApi.Stats.Dates.parse(input["dates"]),
-      languages: CodestatsApi.Stats.Languages.parse(input["languages"]),
-      machines: CodestatsApi.Stats.Machines.parse(input["machines"]),
-      new_xp: CodestatsApi.Stats.Xp.parse(input["new_xp"]),
-      total_xp: CodestatsApi.Stats.Xp.parse(input["total_xp"])
+      dates: CodestatsAPI.Stats.Dates.parse(input["dates"]),
+      languages: CodestatsAPI.Stats.Languages.parse(input["languages"]),
+      machines: CodestatsAPI.Stats.Machines.parse(input["machines"]),
+      new_xp: CodestatsAPI.Stats.Xp.parse(input["new_xp"]),
+      total_xp: CodestatsAPI.Stats.Xp.parse(input["total_xp"])
     }
   end
 end
