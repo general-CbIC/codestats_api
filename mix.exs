@@ -7,8 +7,12 @@ defmodule CodestatsApi.MixProject do
       deps: deps(),
       description: "Code::Stats API client",
       docs: docs(),
-      version: "0.1.0",
       elixir: "~> 1.15",
+      elixirc_options: [
+        warnings_as_errors: true
+      ],
+      package: package(),
+      version: "0.1.0",
       start_permanent: Mix.env() == :prod,
       preferred_cli_env: [
         vcr: :test,
@@ -45,6 +49,17 @@ defmodule CodestatsApi.MixProject do
     [
       main: "readme",
       extras: ["README.md", "CONTRIBUTING.md"]
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{
+        "Changelog" => "https://github.com/general-CbIC/codestats_api/blob/develop/CHANGELOG.md",
+        "GitHub" => "https://github.com/general-CbIC/codestats_api",
+        "Sponsor" => "https://github.com/sponsors/general-CbIC"
+      }
     ]
   end
 end
