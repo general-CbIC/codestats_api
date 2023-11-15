@@ -1,7 +1,5 @@
 defmodule CodestatsApi.Stats do
-  @moduledoc false
-
-  @typedoc """
+  @moduledoc """
   Structure containing all the user's stats.
   """
   @type t() :: %__MODULE__{

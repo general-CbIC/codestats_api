@@ -1,7 +1,5 @@
 defmodule CodestatsApi.Stats.Languages do
-  @moduledoc false
-
-  @typedoc """
+  @moduledoc """
   Map of programming lanuage names to XP.
 
   Example:
