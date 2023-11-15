@@ -12,14 +12,15 @@ defmodule CodestatsApi.MixProject do
         warnings_as_errors: true
       ],
       package: package(),
-      version: "0.1.0",
       start_permanent: Mix.env() == :prod,
+      source_url: "https://github.com/general-CbIC/codestats_api",
       preferred_cli_env: [
         vcr: :test,
         "vcr.delete": :test,
         "vcr.check": :test,
         "vcr.show": :test
-      ]
+      ],
+      version: "0.1.0"
     ]
   end
 
