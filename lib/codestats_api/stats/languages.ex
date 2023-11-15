@@ -1,4 +1,4 @@
-defmodule CodestatsApi.Stats.Languages do
+defmodule CodestatsAPI.Stats.Languages do
   @moduledoc """
   Map of programming lanuage names to XP.
 
@@ -17,8 +17,8 @@ defmodule CodestatsApi.Stats.Languages do
   """
   @type t() :: %{
           String.t() => %{
-            new_xps: CodestatsApi.Stats.Xp.t(),
-            xps: CodestatsApi.Stats.Xp.t()
+            new_xps: CodestatsAPI.Stats.Xp.t(),
+            xps: CodestatsAPI.Stats.Xp.t()
           }
         }
 
@@ -32,8 +32,8 @@ defmodule CodestatsApi.Stats.Languages do
       {
         language,
         %{
-          new_xps: CodestatsApi.Stats.Xp.parse(new_xps),
-          xps: CodestatsApi.Stats.Xp.parse(xps)
+          new_xps: CodestatsAPI.Stats.Xp.parse(new_xps),
+          xps: CodestatsAPI.Stats.Xp.parse(xps)
         }
       }
     end)

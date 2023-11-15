@@ -1,4 +1,4 @@
-defmodule CodestatsApi.Stats.Xp do
+defmodule CodestatsAPI.Stats.Xp do
   @moduledoc """
   Integer representing the amount of XP.
   """

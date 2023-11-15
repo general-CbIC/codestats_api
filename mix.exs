@@ -1,4 +1,4 @@
-defmodule CodestatsApi.MixProject do
+defmodule CodestatsAPI.MixProject do
   use Mix.Project
 
   def project do
@@ -7,7 +7,7 @@ defmodule CodestatsApi.MixProject do
       deps: deps(),
       description: "Code::Stats API client",
       docs: docs(),
-      elixir: "~> 1.15",
+      elixir: "~> 1.10",
       elixirc_options: [
         warnings_as_errors: true
       ],
@@ -20,7 +20,7 @@ defmodule CodestatsApi.MixProject do
         "vcr.check": :test,
         "vcr.show": :test
       ],
-      version: "0.1.0"
+      version: "0.2.0"
     ]
   end
 
