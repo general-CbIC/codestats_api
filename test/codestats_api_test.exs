@@ -1,8 +1,8 @@
-defmodule CodestatsApiTest do
+defmodule CodestatsAPITest do
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Httpc
 
-  doctest CodestatsApi
+  doctest CodestatsAPI
 
   setup do
     ExVCR.Config.cassette_library_dir("fixture/vcr_cassettes")
@@ -12,7 +12,7 @@ defmodule CodestatsApiTest do
   describe "get_user_data/1" do
     test "returns the data from the Code::Stats API for user `cbic`" do
       use_cassette "get_user_data_cbic" do
-        assert {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("cbic")
+        assert {:ok, %CodestatsAPI.Stats{} = result} = CodestatsAPI.get_user_data("cbic")
 
         # user name
         assert result.user == "cbic"
@@ -48,7 +48,7 @@ defmodule CodestatsApiTest do
 
     test "returns the data from the Code::Stats API for user `test`" do
       use_cassette "get_user_data_test" do
-        assert {:ok, %CodestatsApi.Stats{} = result} = CodestatsApi.get_user_data("test")
+        assert {:ok, %CodestatsAPI.Stats{} = result} = CodestatsAPI.get_user_data("test")
 
         # user name
         assert result.user == "test"
@@ -72,7 +72,7 @@ defmodule CodestatsApiTest do
 
     test "returns error when user does not exist" do
       use_cassette "get_user_data_user_does_not_exist" do
-        assert {:error, :user_not_found} = CodestatsApi.get_user_data("no_such_user")
+        assert {:error, :user_not_found} = CodestatsAPI.get_user_data("no_such_user")
       end
     end
   end

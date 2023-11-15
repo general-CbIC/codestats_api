@@ -1,6 +1,6 @@
-# Contributing to CodestatsApi
+# Contributing to CodestatsAPI
 
-CodestatsApi is written in [Elixir](https://elixir-lang.org/).
+CodestatsAPI is written in [Elixir](https://elixir-lang.org/).
 
 For branching management, this project uses [git-flow](https://github.com/petervanderdoes/gitflow-avh). The `main` branch is reserved for releases: the development process occurs on the `develop` and `feature` branches. Please never commit to `main`.
 

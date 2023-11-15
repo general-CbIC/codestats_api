@@ -1,4 +1,4 @@
-# CodestatsApi
+# CodestatsAPI
 
 Elixir library for making requests to [Code::Stats](https://codestats.net/). Why not?
 
@@ -28,11 +28,11 @@ end
 ### Get user's Stats
 
 ```elixir
-{:ok, %CodestatsApi.Stats{}} = CodestatsApi.get_user_data("username")
+{:ok, %CodestatsAPI.Stats{}} = CodestatsAPI.get_user_data("username")
 ```
 
 That's all :)
-A detailed description of the `Stats` structure can be found [here](https://hexdocs.pm/codestats_api/CodestatsApi.Stats.html).
+A detailed description of the `Stats` structure can be found [here](https://hexdocs.pm/codestats_api/CodestatsAPI.Stats.html).
 
 ## Contributions
 
