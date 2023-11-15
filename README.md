@@ -24,7 +24,7 @@ Add `:codestats_api` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:codestats_api, "~> 0.1.0"}
+    {:codestats_api, "~> 0.2.0"}
   ]
 end
 ```
