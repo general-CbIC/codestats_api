@@ -6,7 +6,10 @@ The library uses only one external dependency - [Jason](https://hex.pm/packages/
 
 ## Requirements
 
-TODO: add
+| Requirement | Version |
+|-------------|---------|
+| Erlang/OTP  | >= 23   |
+| Elixir      | >= 1.10 |
 
 ## Installation
 
