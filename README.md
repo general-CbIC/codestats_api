@@ -1,5 +1,11 @@
 # CodestatsAPI
 
+![Build and tests workflow](https://github.com/general-CbIC/codestats_api/actions/workflows/ci-tests.yml/badge.svg)
+[![hex.pm version](https://img.shields.io/hexpm/v/codestats_api.svg?style=flat)](https://hex.pm/packages/codestats_api)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg?style=flat)](https://hexdocs.pm/codestats_api/)
+[![License](https://img.shields.io/hexpm/l/codestats_api.svg?style=flat)](https://github.com/general-CbIC/codestats_api/blob/main/LICENSE)
+[![Total Download](https://img.shields.io/hexpm/dt/codestats_api.svg?style=flat)](https://hex.pm/packages/codestats_api)
+
 Elixir library for making requests to [Code::Stats](https://codestats.net/). Why not?
 
 The library uses only one external dependency - [Jason](https://hex.pm/packages/jason), to parse the JSON result. For HTTP requests, the built-in OTP [:httpc](https://www.erlang.org/doc/man/httpc.html) is used.
