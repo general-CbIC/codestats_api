@@ -4,10 +4,12 @@ defmodule CodestatsApi.MixProject do
   def project do
     [
       app: :codestats_api,
+      deps: deps(),
+      description: "Code::Stats API client",
+      docs: docs(),
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
-      deps: deps(),
       preferred_cli_env: [
         vcr: :test,
         "vcr.delete": :test,
@@ -36,6 +38,13 @@ defmodule CodestatsApi.MixProject do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test environment
       {:exvcr, "~> 0.14", only: :test}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      extras: ["README.md", "CONTRIBUTING.md"]
     ]
   end
 end
