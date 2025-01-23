@@ -32,6 +32,8 @@ jobs:
             otp: '26'
           - elixir: '1.17'
             otp: '27'
+          - elixir: '1.18'
+            otp: '27'
     steps:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
@@ -64,6 +66,6 @@ jobs:
         uses: erlef/setup-beam@v1
         with:
           otp-version: '27'
-          elixir-version: '1.17'
+          elixir-version: '1.18'
       - run: mix do deps.get, compile
       - run: mix check
