@@ -24,7 +24,7 @@ defmodule CodestatsAPI do
 
     case :httpc.request(:get, {url, []}, [], []) do
       {:ok, {{_version, 200, _reason_phrase}, _headers, body}} ->
-        {:ok, body |> Jason.decode!() |> CodestatsAPI.Stats.parse()}
+        {:ok, body |> to_string() |> JSON.decode!() |> CodestatsAPI.Stats.parse()}
 
       {:ok, {{_version, 404, _reason_phrase}, _headers, _body}} ->
         {:error, :user_not_found}
