@@ -8,14 +8,12 @@
 
 Elixir library for making requests to [Code::Stats](https://codestats.net/). Why not?
 
-The library uses only one external dependency - [Jason](https://hex.pm/packages/jason), to parse the JSON result. For HTTP requests, the built-in OTP [:httpc](https://www.erlang.org/doc/man/httpc.html) is used.
+## Requirements table
 
-## Requirements
-
-| Requirement | Version |
-|-------------|---------|
-| Erlang/OTP  | >= 23   |
-| Elixir      | >= 1.10 |
+| CodestatsAPI | Elixir  | Erlang |
+|--------------|---------|--------|
+| <= 0.2.0     | >= 1.10 | >= 23  |
+| >= 0.3.0     | >= 1.18 | >= 25  |
 
 ## Installation
 
@@ -24,7 +22,7 @@ Add `:codestats_api` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:codestats_api, "~> 0.2.0"}
+    {:codestats_api, "~> 0.3.0"}
   ]
 end
 ```

@@ -7,7 +7,7 @@ defmodule CodestatsAPI.MixProject do
       deps: deps(),
       description: "Code::Stats API client",
       docs: docs(),
-      elixir: "~> 1.10",
+      elixir: "~> 1.18",
       elixirc_options: [
         warnings_as_errors: true
       ],
@@ -20,7 +20,7 @@ defmodule CodestatsAPI.MixProject do
         "vcr.check": :test,
         "vcr.show": :test
       ],
-      version: "0.2.0"
+      version: "0.3.0"
     ]
   end
 
@@ -34,12 +34,11 @@ defmodule CodestatsAPI.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.0"},
       # dev environment
       {:credo, ">= 0.0.0", only: :dev, runtime: false},
       {:dialyxir, ">= 0.0.0", only: :dev, runtime: false},
       {:doctor, ">= 0.0.0", only: :dev, runtime: false},
-      {:ex_check, "~> 0.15.0", only: :dev, runtime: false},
+      {:ex_check, "~> 0.16.0", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test environment
       {:exvcr, "~> 0.14", only: :test}
