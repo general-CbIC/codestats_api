@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Elixir bumped to `1.18` at local env and CI.
+
 ## [0.2.0] - 2023-11-15
 
 ### Changed
