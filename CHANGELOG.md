@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Elixir bumped to `1.18` at local env and CI.
+- `Jason` removed from production dependencies.
+
+### Breaking changes
+
+- Changed minimum required Elixir version to `1.18`.
 
 ## [0.2.0] - 2023-11-15
 

@@ -10,7 +10,12 @@ Elixir library for making requests to [Code::Stats](https://codestats.net/). Why
 
 The library uses only one external dependency - [Jason](https://hex.pm/packages/jason), to parse the JSON result. For HTTP requests, the built-in OTP [:httpc](https://www.erlang.org/doc/man/httpc.html) is used.
 
-## Requirements
+## Requirements table
+
+| CodestatsAPI | Elixir  | Erlang |
+|--------------|---------|--------|
+| <= 0.2.0     | >= 1.10 | >= 23  |
+| >= 0.3.0     | >= 1.18 | >= 25  |
 
 | Requirement | Version |
 |-------------|---------|
