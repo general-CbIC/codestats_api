@@ -38,7 +38,7 @@ defmodule CodestatsAPI.MixProject do
       {:credo, ">= 0.0.0", only: :dev, runtime: false},
       {:dialyxir, ">= 0.0.0", only: :dev, runtime: false},
       {:doctor, ">= 0.0.0", only: :dev, runtime: false},
-      {:ex_check, "~> 0.16.0", only: :dev, runtime: false},
+      {:ex_check, "~> 0.17.0", only: :dev, runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       # test environment
       {:exvcr, "~> 0.14", only: :test}
